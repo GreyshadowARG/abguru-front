@@ -1,0 +1,23 @@
+[33mcommit 5e58da3c902419b006ba0f2fac74538681ede466[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m)[m
+Author: GreyshadowARG <facundoviale@gmail.com>
+Date:   Tue Aug 9 15:12:33 2022 -0300
+
+    front login/register basicos OK
+
+[33mcommit 296d5414e0cf561c3e2071e6b90d981f705570fc[m
+Author: GreyshadowARG <facundoviale@gmail.com>
+Date:   Wed Aug 3 09:20:38 2022 -0300
+
+    login/registro funcionando con db
+
+[33mcommit d3d9240e9bc896b5b2e37a7351010474d0d7c18d[m[33m ([m[1;32mmaster[m[33m)[m
+Author: GreyshadowARG <facundoviale@gmail.com>
+Date:   Fri Jul 29 08:27:53 2022 -0300
+
+    front con signup creado, sin conexion con back
+
+[33mcommit 5bda0174d1149b94130c1429065a616da9af63c6[m
+Author: GreyshadowARG <facundoviale@gmail.com>
+Date:   Sun Jul 24 18:07:08 2022 -0300
+
+    Initialize project using Create React App

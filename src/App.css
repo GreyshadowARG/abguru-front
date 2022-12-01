@@ -1,0 +1,912 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  padding: 1rem 0.5rem;
+}
+body {
+  min-height: 100vh;
+  background-image: url("/src/assets/images/background_img.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+/* Navbar */
+.navbar{
+  background-color: white;
+  width: 960px;
+  height: 40px;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+.navbar_nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5ch;
+}
+
+/* button animation */
+.navbar_button{
+  color: black;
+  position: relative;
+  text-decoration: none;
+  padding: 9px;
+}
+.navbar_button:hover{
+  transition: ease-in 170ms;
+  transition-timing-function: linear;
+  color:white;
+  background-color: rgb(225, 131, 175);
+}
+.navbar_button:active{
+  background-color: rgb(213, 62, 132);
+}
+.navbar_button_logout{
+  all:unset;
+  color: black;
+  position: relative;
+  text-decoration: none;
+  padding: 9px;
+}
+.navbar_button_logout:hover{
+  transition: ease-in 170ms;
+  transition-timing-function: linear;
+  color:white;
+  background-color: rgb(157, 157, 157);
+}
+.navbar_button_logout:active{
+  background-color: rgb(86, 86, 86);
+}
+
+/* login y registro */
+.landing_container{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing_container__header{ 
+  max-width: 960px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.3rem;
+}
+
+.landing_container img,
+.logo_header{
+  width: 15rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.landing_container h1{
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.landing_container p{
+  align-self: start;
+  max-width: 60%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  letter-spacing: 0.05ch;
+
+}
+.landing_video_banner{
+  align-items: center;
+  height: 10px;
+  width: 100vw;
+  background-color: rgb(255, 72, 150);
+}
+.seccion-test{
+  color:black
+}
+
+.authentication_section{
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  max-width: 600px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding:2rem;
+  color: rgb(0, 0, 0);
+  background-color: #dbdbdb;
+  border-radius: 1rem;
+}
+.authentication_section h2{
+  color:rgb(213, 62, 132);
+  font-weight: bold;
+}
+.ingresar_button {
+  color: white;
+  font-size: 1.7ch;
+  border: solid 0px;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  background-color: rgb(213, 62, 132);
+  margin-top: 1.2rem;
+}
+.register_button{
+  text-decoration: none;
+  color: white;
+  font-size: 1.7ch;
+  border: solid 0px;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgb(213, 62, 132);
+}
+.ingresar_button:hover,
+.register_button:hover{
+  color: white;
+  background-color: rgb(227, 105, 162);
+}
+.ingresar_button:active,
+.register_button:active{
+  background-color: rgb(159, 28, 89);
+}
+.authentication_section_reg{
+  all:unset;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+.terms_container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+}
+.terms_open_button{
+  all:unset;
+}
+.terms_open_button:hover{
+  color:red;
+}
+.terms_bg{
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+}
+.terms_text{
+  color: black;
+  background-color: #e8e8e8;
+  height: 700px;
+  padding: 45px 25px 25px 25px;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  font-size: 1.6ch;
+}
+.terms_text::-webkit-scrollbar{
+  width: 5px;
+  background-color: white;
+}
+.terms_text::-webkit-scrollbar-thumb{
+  width: 5px;
+  background-color: rgb(159, 28, 89);
+}
+.terms_text a{
+  color:black;
+  font-weight: bold;
+}
+.terms_text a:hover{
+  color:rgb(159, 28, 89);
+}
+.terms_button{
+  width: 120px;
+  margin-top: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  padding-bottom: 1rem;
+}
+a, a:visited {
+  text-decoration: none;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+font-family: 'Poppins', sans-serif;
+font-size: 1.7ch;
+padding: 0.25rem;
+}
+label,
+button {
+padding: 0.5rem;
+}
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+.instructions > svg {
+  margin-right: 0.25rem;
+}
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+.hide {
+  display: none;
+}
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#recover-password_button{
+  all: unset;
+}
+#recover-password_button:hover{
+  color:rgb(159, 28, 89);
+}
+
+/* Seccion principal*/
+.main_container{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.section_container{
+  width: 960px;
+  align-self: center;
+  padding:1.2rem;
+  line-height: 1.4em;
+  display: flex;
+  flex-direction: column;
+}
+.section_container h2{
+  font-weight: bold;
+  color:rgb(213, 62, 132);
+}
+.section_container_descripcion{
+  padding-bottom:0.4rem;
+  line-height: 1.2em;
+  font-size: 1.4ch;
+}
+.section_container_legales{
+  font-style: italic;
+  line-height: 1.2em;
+  font-size: 1.4ch;
+  padding-bottom:0.6rem;
+}
+section {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  max-width: 960px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding:2rem;
+  color: rgb(0, 0, 0);
+  background-color: #dbdbdb;
+  border-radius: 1rem;
+}
+section h1{
+  color:rgb(213, 62, 132)
+}
+.hotelsBanner_container{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hotelsBanner_container h2{
+  font-family: 'Caveat', cursive;
+  color:rgb(213, 62, 132);
+  font-weight: 700;
+  font-size: 3rem;
+  justify-self:flex-end;
+}
+.hotelsBanner_img{
+  width: 15rem;
+}
+
+/*Seccion Home */
+.user_home_pending_bar{
+  background-color: rgb(239, 197, 197);
+  max-width: 920px;
+  padding: 0.2rem;
+  padding-left: 0.6rem;
+  margin-bottom: 1rem;
+}
+.section_home_info{
+  all: unset;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-self: center;
+}
+.userData_home_topbar{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.userData_home_topbar h4{
+  font-size: 2ch;
+}
+.section_home_info h2{
+  font-weight: bold;
+  text-align: start;
+  color:rgb(213, 62, 132);
+}
+.salesstate_none{
+  font-family: 'Poppins', sans-serif;
+  font-size: 3ch;
+  line-height: 1em;
+  padding:70px 0px 20px 0;
+  text-align: center;
+  color: rgb(137, 137, 137); 
+}
+#AB_Prize_h5{
+  line-height: 0.8em;
+}
+
+/* Seccion Premios Disponibles */
+.section_prizes_main{
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+.section_prizes_main_details{
+  background-color: rgb(221, 195, 207);
+  padding:0.6em;
+}
+.section_prizes_main_details p{
+  all:unset;
+}
+.section_home_table_title{
+  background-color: rgb(159, 230, 181);
+  width: 650px;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+/* Seccion Nueva reserva */
+.section_newsale_container__row2{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.section_newsale_container__row2 p{
+  margin-bottom: -0.1em;
+}
+
+.section_newsale_container__inputs label{
+  font-weight: bold;
+}
+
+.section_newsale_container__table{
+  padding-top: 1rem;
+}
+.section_newsale_container__table h2{
+  color:rgb(213, 62, 132)
+}
+.newsale_table_head th{
+  width:  63%;
+ }
+
+#custom-switch{
+  margin-right:0.6em;
+}
+#color-pink{
+  color:rgb(213, 62, 132);
+  font-weight: bold;
+}
+#color-green{
+  color:rgb(53, 132, 7);
+  font-weight: bold;
+}
+#color-red{
+  color:rgb(142, 38, 38);
+  font-weight: bold;
+}
+#color-orange{
+  color:rgb(202, 128, 25);
+  font-weight: bold;
+}
+#padding_6px{
+  margin-left:6px;
+  margin-right: 6px;
+}
+.padding_right_10px{
+  padding-right: 40px;
+}
+#show_conditions{
+  text-decoration: none;
+  font-size: 1.3ch;
+  width: 270px;
+  height: 40px;
+  color: white;
+  background-color: rgb(183, 86, 131);
+  border: solid 0px;
+  margin-bottom: 0.5rem;
+}
+.abTourismAuthority_legal{
+  background-color: rgb(221, 195, 207);
+  color:black;
+  font-size: 1.6ch;
+  padding:0.6rem;
+}
+.inputAB_Hotel{
+  width: 500px;
+
+}
+.price_legal{
+  background-color: rgb(221, 195, 207);
+  color:black;
+  font-size: 1.6ch;
+  padding:0.6rem;
+}
+.hotelSelector_default{
+  font-family: 'Poppins', sans-serif;
+  font-size: 3ch;
+  line-height: 1em;
+  padding: 40px 0px 40px 0;
+  text-align: center;
+  color: rgb(137, 137, 137);  
+}
+.new_sale_inputs{
+  width: 100%;
+}
+.new_sale_inputs_AB{
+  width: 70%;
+  margin-top: 0.5em;
+}
+.hotelesLabel{
+  all:unset;
+}
+.R2_radios{
+  font-style: italic;
+  margin-bottom: -1em;
+}
+.newsale_sendButton{
+  font-size: 2ch;
+  font-weight: bold;
+  width: 200px;
+  background-color: rgb(48, 207, 98);
+  color: white;
+  border-radius: 6px;
+  border: solid 0px;
+  padding: 20px 0px 20px 0;
+  margin-bottom: 20px;
+}
+.newsale_sendButton:hover{
+  transition: ease-in 170ms;
+  transition-timing-function: linear;
+  color:rgb(0, 0, 0);
+  background-color: rgb(36, 154, 73);
+  color: white;
+}
+.newsale_sendButton:active{
+  background-color: rgb(48, 207, 98);
+}
+.section_newsale_container__row{
+  display: flex;
+  flex-direction: row;
+}
+.section_newsale_container__row_send{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px 20px 0;
+}
+.section_newsale_container__row_AB{
+  display: flex;
+  flex-direction: row;
+}
+.section_newsale_container__row_send p{
+  text-align: center;
+  font-size: 1.6ch;
+  line-height: 1.8ch;
+}
+.section_newsale_success{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.section_newsale_success h5{
+  text-align: center;
+}
+
+/* Loaded Sales */
+.section_loadedsales_container{
+  max-width: 960px;
+  line-height: 1.2ch;
+  padding-bottom: 0.8rem;
+}
+.section_loadedsales_main{
+  display: flex;
+  flex-direction: column;
+}
+.loadedsales_legal{
+  background-color: rgb(235, 235, 235);
+  color:black;
+  line-height: 1.2em;
+  font-size: 1.4ch;
+  font-style: italic;
+  padding:0.6rem;
+  text-align: center;
+}
+.saleslist_none{
+  font-family: 'Poppins', sans-serif;
+  font-size: 3ch;
+  line-height: 1em;
+  padding:120px 0px 180px 0;
+  text-align: center;
+  color: rgb(137, 137, 137); 
+}
+.loadedsales_saleCardModel{
+  padding:1em;
+}
+
+.saleslist_card{
+  background-color: white;
+}
+.saleslist_card_header_approved{
+  all:unset;
+  background-color: rgb(101, 195, 133);
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.saleslist_card_header_pending{
+  all:unset;
+  background-color: rgb(234, 192, 214);
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.saleslist_card_header_deny{
+  all:unset;
+  background-color: rgb(222, 113, 113);
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.saleslist_card_header_correction{
+  all:unset;
+  background-color: rgb(239, 173, 103);
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.saleslist_card_header_correction p,
+.saleslist_card_header_deny p,
+.saleslist_card_header_pending p,
+.saleslist_card_header_approved p{
+  all:unset;
+}
+.saleslist_card_body{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0.8rem;
+  line-height: 1.2em;
+}
+.saleslist_card_body_right{
+  text-align: right;
+  padding-right: 1em;
+}
+.saleslist_card_body_left{
+  text-align: left;
+  width: 650px;
+
+}
+.saleslist_card_body p{
+  all:unset;
+  font-size: 1.7ch;
+}
+.saleslist_card_row{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2em;
+}
+.salelist_card_body_correctionText{
+  background-color: rgb(239, 197, 197);
+  padding: 0.8rem;
+  margin-bottom: -2px;
+}
+#padding_left_3px{
+  padding-left: 3px;
+}
+#text-bold{
+  font-weight: bold;
+}
+#delete-button{
+  all:unset;
+  padding: 0.7em;
+  color: white;
+  background-color: rgb(163, 49, 49);
+}
+#delete-button:hover{
+  transition: ease-in 170ms;
+  transition-timing-function: linear;
+  color: white;
+  background-color: rgb(104, 22, 22);
+}
+#delete-button:active{
+  background-color: rgb(163, 49, 49);
+}
+.edit-button{
+  all:unset;
+  padding: 0.2rem;
+  margin-left: 0.8rem;
+  color: white;
+  background-color: rgb(215, 154, 49);
+}
+.edit-button:hover{
+  transition: ease-in 170ms;
+  transition-timing-function: linear;
+  color: white;
+  background-color: rgb(186, 131, 36);
+}
+.edit-button:active{
+  background-color: rgb(215, 154, 49);
+}
+#unset{
+  text-decoration: none;
+}
+
+/* Redeem points */
+.section_redeem_main{
+  max-width: 900px;
+  text-align: left;
+  padding-left: 10px;
+}
+.redeem_row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+.redeem_row h4{
+  all:unset;
+  font-size: 2.4ch;
+
+}
+.redeem_button{
+  font-size: 2ch;
+  font-weight: bold;
+  background-color: rgb(48, 207, 98);
+  color: white;
+  border-radius: 6px;
+  border: solid 0px;
+  margin-left: 12px;
+  
+}
+.redeem_button:hover{
+  transition: ease-in 170ms;
+  transition-timing-function: linear;
+  color:rgb(0, 0, 0);
+  background-color: rgb(36, 154, 73);
+  color: white;
+}
+.redeem_button:active{
+  background-color: rgb(48, 207, 98);
+}
+.arrow{
+  border: solid rgb(255, 255, 255);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.redeem_maxNight_alert{
+  background-color: rgb(234, 188, 188);
+  padding: 6px;
+}
+
+.redeem_no_points{
+  font-family: 'Poppins', sans-serif;
+  font-size: 3ch;
+  line-height: 1em;
+  padding: 20px 0px 20px 0;
+  text-align: center;
+  color: rgb(137, 137, 137);  
+}
+
+
+/* Validator */
+.cards_button{
+  gap: 1rem;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.reward_card_button{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  gap: 1rem;
+}
+#go-button{
+  all:unset;
+  padding: 0.28em;
+  color: white;
+  background-color: rgb(81, 170, 29);
+}
+#go-button:hover{
+  transition: ease-in 170ms;
+  transition-timing-function: linear;
+  color: white;
+  background-color: rgb(54, 125, 13);
+}
+#go-button:active{
+  background-color: rgb(81, 170, 29);
+}
+#approve-button{
+  all:unset;
+  padding: 0.7em;
+  color: white;
+  background-color: rgb(81, 170, 29);
+}
+#approve-button:hover{
+  transition: ease-in 170ms;
+  transition-timing-function: linear;
+  color: white;
+  background-color: rgb(54, 125, 13);
+}
+#approve-button:active{
+  background-color: rgb(81, 170, 29);
+}
+#request-button{
+  all:unset;
+  padding: 0.7em;
+  color: white;
+  background-color: rgb(215, 156, 48);
+}
+#request-button:hover{
+  transition: ease-in 170ms;
+  transition-timing-function: linear;
+  color: white;
+  background-color: rgb(163, 115, 26);
+}
+#request-button:active{
+  background-color: rgb(215, 156, 48);
+}
+#request-text{
+  color: rgb(163, 115, 26);
+  font-weight: bold;
+}
+#deny-text{
+  color: rgb(104, 22, 22);
+  font-weight: bold;
+}
+.input_denySale{
+  padding-left: 4px;
+  text-align:left;
+  width: 100%;
+  height: 40px;
+}
+.saleslist_card_correction{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.saleslist_card_correction p{
+  font-size: 1.4ch;
+  font-style: italic;
+}
+.validate_rewards_legal{
+  background-color: rgb(197, 235, 176);
+  color:black;
+  line-height: 1.2em;
+  font-size: 1.4ch;
+  font-style: italic;
+  padding:0.6rem;
+  text-align: center;
+}
+.mb-n1{
+    margin-bottom: -0.6rem;
+    line-height: 1.2em;
+}
+.validation_history_button{
+  padding: 0.7em;
+  color: white;
+  width: 50%;
+  background-color: rgb(183, 86, 131);
+  border: solid 0px;
+  border-radius: 6px;
+}
+.validation_history_button:hover{
+  transition: ease-in 170ms;
+  transition-timing-function: linear;
+  color: white;
+  background-color: rgb(146, 46, 93);
+}
+.validation_history_button:active{
+  background-color: rgb(183, 86, 131);
+}
+
+/* Footer */ 
+.footer_container{
+  align-self:center;
+  width: 960px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer_container__imgs_left{
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.abGuruLogo{
+  width: 145px;
+  height: 60px;
+}
+.AyBLogo{
+  width: 132px;
+  height: 51px;
+}
+.footer_container__imgs_right{
+  width: 500px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.emMarketingLogo{
+  height: 50%;
+  margin-right: 1rem;
+}
+.footer__em_text{
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  align-self: center;
+  font-size: 0.85em;
+  line-height: 1.4em;
+  letter-spacing: 0.05ch;
+}
+
